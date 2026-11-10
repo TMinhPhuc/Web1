@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="styles/index.css" type="text/css">
+</head>
+<body>
+	<img src="images/images.png">
+	<h1>Survey</h1>
+	<p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
+	<h1>Your Information</h1>
+    <form action="SurveyServlet" method="post">
+    	<input type="hidden" name="action" value="add">
+    	<label>First Name</label>
+    	<input type="text" name="firstName" required><br>
+    	<label>Last Name:</label>
+    	<input type="text" name="lastName" required><br>
+    	<label>Email</label>
+    	<input type="text" name="email" required><br>
+    	<label>Date of birth</label>
+    	<input type="text" name="dateOfBirth" required><br>
+	    <h1>How did you hear about us?</h1>
+	    <input type="radio" name="hearFrom" value="searchEngine">Search Engine
+	    <input type="radio" name="hearFrom" value="wordOfMouth">Word of mouth
+	    <input type="radio" name="hearFrom" value="socialMedia">Social media
+	    <input type="radio" name="hearFrom" value="orthers">Orthers
+	    <h1>Would you like to receive announcements about new CDs and special offers?</h1>
+	    <input type="checkbox" name="likeReceiveAnnoucement">YES, I'd like that<br>
+	    <input type="checkbox" name="sendAnnouncement">YES, please send me announcements
+	    <p>Please contact me by: </p>
+	    <select name="contactMethod" required>
+	    	<option value="emailForPostalMail">Email for postal mail</option>
+	    	<option value="emailOnly">Email only</option>
+	    	<option value="postalMailOnly">Postal mail only</option>
+	    </select>
+	    <br>
+	    <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>
